@@ -1,6 +1,6 @@
 {
   "name": "reward-sdk",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A React SDK for the reward system",
   "type": "module",
   "main": "dist/cjs/reward-sdk.js",
