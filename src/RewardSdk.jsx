@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import PreferencesModal from './components/PreferencesModal';
 
+// Import SVG icons
+import { WarningIcon, SkipIcon, MenuIcon, CloseIcon } from './icons';
+
 // -----------------------------
 // CONFIGURATION & CONSTANTS
 // -----------------------------
@@ -1236,10 +1239,7 @@ const [point] = useState(`${calls}_${Math.random().toString(36).substring(2, 7)}
                   animation: 'fadeIn 0.5s',
                   maxWidth: 'fit-content'
                 }}>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 9V14M12 19H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-                      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+                  <WarningIcon />
                   {warningMessage}
                 </div>
               )}
@@ -1472,9 +1472,7 @@ const [point] = useState(`${calls}_${Math.random().toString(36).substring(2, 7)}
                 }}
               >
                 Skip
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+                <SkipIcon />
               </button>
             )}
           </div>
@@ -1519,7 +1517,7 @@ const [point] = useState(`${calls}_${Math.random().toString(36).substring(2, 7)}
             backgroundColor: '#e0e0e0',
             userSelect: 'none',
             fontSize: '16px',
-            fontWeight: 'bold', // Added bold font weight
+            // fontWeight: 'bold', // Added bold font weight
           }}
           onMouseOver={(e) => {
             e.currentTarget.style.color = '#000000';
@@ -1532,7 +1530,7 @@ const [point] = useState(`${calls}_${Math.random().toString(36).substring(2, 7)}
             e.currentTarget.style.boxShadow = 'none';
           }}
         >
-          ☰
+          <MenuIcon />
         </button>
 
         {/* Close button positioned inline */}
@@ -1550,7 +1548,7 @@ const [point] = useState(`${calls}_${Math.random().toString(36).substring(2, 7)}
               color: colors.secondary,
               border: 'none',
               fontSize: '16px',
-              fontWeight: 'bold', // Changed from 'normal' to 'bold'
+              // fontWeight: 'bold', // Changed from 'normal' to 'bold'
               cursor: 'pointer',
               display: 'flex',
               justifyContent: 'center',
@@ -1572,7 +1570,7 @@ const [point] = useState(`${calls}_${Math.random().toString(36).substring(2, 7)}
             }}
             aria-label="Close"
           >
-            ✕
+            <CloseIcon />
           </button>
         )}
       </div>
