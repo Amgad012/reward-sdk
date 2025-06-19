@@ -1,0 +1,83 @@
+{
+  "name": "reward-sdk",
+  "version": "1.0.3",
+  "description": "A React SDK for the reward system",
+  "type": "module",
+  "main": "dist/cjs/reward-sdk.js",
+  "module": "dist/esm/reward-sdk.js",
+  "unpkg": "dist/umd/reward-sdk.js",
+  "jsdelivr": "dist/umd/reward-sdk.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/reward-sdk.js",
+      "require": "./dist/cjs/reward-sdk.js",
+      "browser": "./dist/umd/reward-sdk.js",
+      "default": "./dist/esm/reward-sdk.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],  "scripts": {
+    "dev": "vite",
+    "build": "rm -rf dist && vite build",
+    "build:all": "npm run build",
+    "preview": "vite preview",
+    "build:cdn": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "sdk",
+    "component",
+    "rewards"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.8"
+  },
+  "author": "",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "acorn": "^8.14.1",
+    "browserslist": "^4.24.4",
+    "buffer-from": "^1.1.2",
+    "caniuse-lite": "^1.0.30001714",
+    "convert-source-map": "^2.0.0",
+    "debug": "^4.4.0",
+    "electron-to-chromium": "^1.5.137",
+    "esbuild": "^0.21.5",
+    "escalade": "^3.2.0",
+    "gensync": "^1.0.0-beta.2",
+    "globals": "^11.12.0",
+    "js-tokens": "^4.0.0",
+    "jsesc": "^3.1.0",
+    "json5": "^2.2.3",
+    "loose-envify": "^1.4.0",
+    "lru-cache": "^5.1.1",
+    "ms": "^2.1.3",
+    "nanoid": "^3.3.11",
+    "node-releases": "^2.0.19",
+    "picocolors": "^1.1.1",
+    "postcss": "^8.5.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-refresh": "^0.17.0",
+    "rollup": "^4.40.1",
+    "scheduler": "^0.23.2",
+    "semver": "^6.3.1",
+    "source-map": "^0.6.1",
+    "source-map-js": "^1.2.1",
+    "source-map-support": "^0.5.21",
+    "terser": "^5.39.0",
+    "undici-types": "^6.21.0",
+    "update-browserslist-db": "^1.1.3",
+    "yallist": "^3.1.1"
+  }
+}
