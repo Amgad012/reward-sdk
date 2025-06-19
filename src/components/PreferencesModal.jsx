@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { CheckmarkIcon, CloseModalIcon } from '../icons';
 
 const PreferencesModal = ({ 
   showPreferences, 
@@ -163,10 +164,8 @@ const PreferencesModal = ({
               onMouseOut={(e) => {
                 e.currentTarget.style.backgroundColor = 'transparent';
               }}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18M6 6L18 18" stroke={colors.textLight} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            >              {/* Commented out for now, but using proper component
+              <CloseModalIcon />
             </button>
             */}
           </div>
@@ -224,11 +223,8 @@ const PreferencesModal = ({
                 transition: 'all 0.2s ease',
                 position: 'relative',
                 left: '0',
-              }}>
-                {allTopicsSelected && (
-                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 13L9 17L19 7" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
+              }}>                {allTopicsSelected && (
+                  <CheckmarkIcon width={10} height={10} />
                 )}
               </div>
               <span style={{
@@ -282,11 +278,8 @@ const PreferencesModal = ({
                   justifyContent: 'center',
                   flexShrink: 0, // Prevent checkbox from shrinking
                   transition: 'all 0.2s ease',
-                }}>
-                  {isSelected && (
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 13L9 17L19 7" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
+                }}>                  {isSelected && (
+                    <CheckmarkIcon />
                   )}
                 </div>
                 <span style={{
